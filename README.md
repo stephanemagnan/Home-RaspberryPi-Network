@@ -1,5 +1,6 @@
 # Home-RaspberrryPi-Network
 Steps to setup my Raspberry Pi-based home server
+
 Experience before starting: Absolute beginner with Linux, some knowledge of RP, heard of docker.
 
 Current Feature:
@@ -41,6 +42,7 @@ Reserve your IP address for the RP in your router software
 - I recommend using an easy to remember number such as 10.0.0.10 (if you are using the 10.0.0.X series of addresses) or 192.168.0.192 (if you are using the 192.168.0.X series of addresses). Make it something you will remember because you will use it a lot.
 
 ## PREPARE EXTERNAL HARDDRIVE
+
 REFS:
 -
 
@@ -68,12 +70,14 @@ SSH into RPI Using your tool of choice.
 
 
 ## INSTALL OPENMEDIAVAULT
+
 REFS:
 -
 
 To access OMV, type the IP address of the RP in the browser on a separate computer (for example 10.0.0.10).
 
 ## CONFIGURE SSD IN OPENMEDIAVAULT
+
 REFS:
 -
 
@@ -92,6 +96,7 @@ To create new shared folders
   - [RELATIVE PATH - for all apps, I created folders in var/lib/${APP NAME} to keep everything isolated]
 
 ## INSTALL DOCKER (OMV)
+
 REFS:
 -
 
@@ -99,6 +104,7 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]:
 - "docker": var/lib/docker/
 
 ## INSTALL PORTAINER (OMV)
+
 REFS:
 -
 
@@ -109,6 +115,7 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]:
 To access PORTAINER, type the IP address of the RP + port for the service in the browser on a separate computer (for example http://10.0.0.10:9000).
 
 ## INSTALL HEIMDALL (PORTAINER)
+
 REFS:
 - https://hub.docker.com/r/linuxserver/heimdall
 
@@ -123,6 +130,7 @@ To add a new service to HEIMDALL:
 -
 
 ## INSTALL SPEEDTEST TRACKER (PORTAINER)
+
 REFS:
 - https://github.com/henrywhitaker3/Speedtest-Tracker
 
@@ -134,6 +142,7 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]:
 To access SPEEDTEST TRACKER, type the IP address of the RP + port for the service in the browser on a separate computer (for example http://10.0.0.10:8080).
 
 ## INSTALL PI-HOLE (PORTAINER)
+
 REFS:
 -
 
@@ -145,18 +154,21 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]:
 To access PI-HOLE, type the IP address of the RP + port for the service in the browser on a separate computer (for example 10.0.0.10:).
 
 ## INSTALL UNBOUND (PORTAINER)
+
 REFS:
 -
 
 Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: var/lib//
 
 ## INSTALL NEXTCLOUD (PORTAINER)
+
 REFS:
 -
 
 Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: var/lib//
 
 ## CONFIGURE SMB FILE SHARE (OMV)
+
 REFS:
 -
 
