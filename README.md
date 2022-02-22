@@ -44,7 +44,8 @@ Reserve your IP address for the RP in your router software
 ## PREPARE EXTERNAL HARDDRIVE
 
 REFS:
--
+- https://forums.raspberrypi.com/viewtopic.php?t=261455
+- https://tldp.org/HOWTO/Partition/fdisk_partitioning.html
 
 I am using a SeaGate 1 TB external SSD harddrive. I am not using an external powered USB hub. RP appears to be providing sufficient power.
 Before use, the SSD must be partitioned for use [if applicable].
@@ -74,7 +75,8 @@ SSH into RPI Using your tool of choice.
 REFS:
 -
 
-To access OMV, type the IP address of the RP in the browser on a separate computer (for example 10.0.0.10).
+To access OMV, type the IP address of the RP in the browser on a separate computer:
+- http://10.0.0.10
 
 ## CONFIGURE SSD IN OPENMEDIAVAULT
 
@@ -112,7 +114,8 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]:
 - "portainer": var/lib/portainer/
 
 
-To access PORTAINER, type the IP address of the RP + port for the service in the browser on a separate computer (for example http://10.0.0.10:9000).
+To access PORTAINER, type the IP address of the RP + port for the service in the browser on a separate computer:
+- http://10.0.0.10:9000
 
 ## INSTALL HEIMDALL (PORTAINER)
 
@@ -124,7 +127,8 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]:
 - "heimdall": var/lib/heimdall/
 
 
-To access HEIMDALL, type the IP address of the RP + port for the service in the browser on a separate computer (for example http://10.0.0.10:6941).
+To access HEIMDALL, type the IP address of the RP + port for the service in the browser on a separate computer:
+- http://10.0.0.10:6941
 
 To add a new service to HEIMDALL:
 -
@@ -139,7 +143,8 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]:
 - "speedtesttracker": var/lib/speedtesttracker/
 
 
-To access SPEEDTEST TRACKER, type the IP address of the RP + port for the service in the browser on a separate computer (for example http://10.0.0.10:8080).
+To access SPEEDTEST TRACKER, type the IP address of the RP + port for the service in the browser on a separate computer:
+- http://10.0.0.10:8080
 
 ## INSTALL PI-HOLE (PORTAINER)
 
@@ -151,7 +156,8 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]:
 - var/lib//
 
 
-To access PI-HOLE, type the IP address of the RP + port for the service in the browser on a separate computer (for example 10.0.0.10:).
+To access PI-HOLE, type the IP address of the RP + port for the service in the browser on a separate computer:
+- http://10.0.0.10:
 
 ## INSTALL UNBOUND (PORTAINER)
 
