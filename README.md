@@ -65,6 +65,8 @@ SSH into RPI Using your tool of choice.
 - I didn't use the hostname for SSH. I use the IP address of my RP. [SEE INSTALL RASPBERRY PI OS for notes on reserving a fixed IP for your RP]
 - Log in using your RP info [SEE INSTALL RASPBERRY PI OS for setting username and password during setup]
 
+
+
 ## INSTALL OPENMEDIAVAULT
 REFS:
 -
@@ -76,48 +78,71 @@ REFS:
 -
 
 The external harddrive must be mounted in OMV before use. I created shared folders on my external harddrive for all of my applications and containers. 
+
 Open OMV (type IP of RP in the browser).
 
 Mount the NTFS partition
-- Storage> Disk> File Systems> (+)> Mount > [SELECT DRIVE PARTITION. ex: dev/sda3 NTFS XYZ GB]
+- Storage> Disk> File Systems> (+)> Mount > 
+  - [SELECT DRIVE PARTITION. ex: dev/sda3 NTFS XYZ GB]
 
 To create new shared folders
-- Storage> Shared Folders> (+)> [ADD NAME - I use application name unless I have a reason to use something else]
-                                [SELECT FILE SYSTEM - from previous step]
-                                [RELATIVE PATH - for all apps, I created folders in var/lib/${APP NAME} to keep everything isolated]
+- Storage> Shared Folders> (+)> 
+  - [ADD NAME - I use application name unless I have a reason to use something else]
+  - [SELECT FILE SYSTEM - from previous step]
+  - [RELATIVE PATH - for all apps, I created folders in var/lib/${APP NAME} to keep everything isolated]
 
 ## INSTALL DOCKER (OMV)
 REFS:
 -
 
-Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: "docker": var/lib/docker/
+Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: 
+- "docker": var/lib/docker/
 
 ## INSTALL PORTAINER (OMV)
 REFS:
 -
 
-Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: "portainer": var/lib/portainer/
+Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: 
+- "portainer": var/lib/portainer/
+
+
+To access PORTAINER, type the IP address of the RP + port for the service in the browser on a separate computer (for example http://10.0.0.10:9000).
 
 ## INSTALL HEIMDALL (PORTAINER)
 REFS:
 - https://hub.docker.com/r/linuxserver/heimdall
 
 
-Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: "heimdall": var/lib/heimdall/
+Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: 
+- "heimdall": var/lib/heimdall/
+
+
+To access HEIMDALL, type the IP address of the RP + port for the service in the browser on a separate computer (for example http://10.0.0.10:6941).
+
+To add a new service to HEIMDALL:
+-
 
 ## INSTALL SPEEDTEST TRACKER (PORTAINER)
 REFS:
 - https://github.com/henrywhitaker3/Speedtest-Tracker
 
 
-Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: "speedtesttracker": var/lib/speedtesttracker/
+Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: 
+- "speedtesttracker": var/lib/speedtesttracker/
+
+
+To access SPEEDTEST TRACKER, type the IP address of the RP + port for the service in the browser on a separate computer (for example http://10.0.0.10:8080).
 
 ## INSTALL PI-HOLE (PORTAINER)
 REFS:
 -
 
-Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: var/lib//
-Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: var/lib//
+Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: 
+- var/lib//
+- var/lib//
+
+
+To access PI-HOLE, type the IP address of the RP + port for the service in the browser on a separate computer (for example 10.0.0.10:).
 
 ## INSTALL UNBOUND (PORTAINER)
 REFS:
@@ -135,6 +160,7 @@ Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: var/lib//
 REFS:
 -
 
-Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: "NASa": shared/NASa public/
-Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: "NASb": shared/NASb private/
+Set up a new shared folder [see CONFIGURE SSD IN OPENMEDIAVAULT]: 
+- "NASa": shared/NASa public/
+- "NASb": shared/NASb private/
 
