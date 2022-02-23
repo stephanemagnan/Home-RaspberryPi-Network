@@ -61,7 +61,7 @@ STEPS:
 ...
 sudo apt update
 sudo apt upgrade
-sudo reboot
+sudo reboot -h now
 ...
 7. Determine IP address for RP
    - [recommended] Conect an extrenal monitor + keyboard to your RP to run the ... ifconfig ...  command to view the IP address assigned to the RP.
@@ -270,13 +270,21 @@ To access SPEEDTEST TRACKER, type the IP address of the RP + port for the servic
 
 Add SPEEDTEST TRACKER to HEIMDALL [see steps for adding new service to HEIMDALL in INSTALL HEIMDALL (PORTAINER)]
 
-## INSTALL PI-HOLE (PORTAINER)
+## INSTALL PI-HOLE WITH UNBOUND (PORTAINER)
 
 REFS:
--
+- https://burakkarakan.com/blog/pihole-on-raspberry-using-pi-docker-and-docker-compose/
+- https://github.com/pi-hole/docker-pi-hole
+- https://docs.pi-hole.net/
+- https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/
+- https://github.com/willy-wagtail/raspberrypi#piholeandunboundwithdockercompose
+- https://github.com/anudeepND/whitelist
+- https://www.xfelix.com/2020/09/pihole-unbound-docker-setup-on-raspberry-pi/
+- https://www.youtube.com/watch?v=4X6KYN1cQ1Y
+- https://discourse.pi-hole.net/t/commonly-whitelisted-domains/212
 
 SUMMARY:
-
+Install PI-HOLE DNS 
 DETAILS:
 
 STEPS:
@@ -284,9 +292,14 @@ STEPS:
    - var/lib//
    - var/lib//
 
+To get dig function working
+sudo apt install dnsutils
+
+lists
+https://firebog.net/
 
 To access PI-HOLE, type the IP address of the RP + port for the service in the browser on a separate computer:
-- http://10.0.0.10:
+- http://10.0.0.4:8001/admin/:
 
 Add PI-HOLE to HEIMDALL [see steps for adding new service to HEIMDALL in INSTALL HEIMDALL (PORTAINER)]
 
@@ -301,6 +314,8 @@ DETAILS:
 
 STEPS:
 1. Set up new shared folders [see CONFIGURE SSD IN OPENMEDIAVAULT]: var/lib//
+
+
 
 ## INSTALL NEXTCLOUD (PORTAINER) -- NOT CURRENTLY WORKING - ISSUES WITH OTHER USERS HAVING PERMISSION - ERROR 0770 -- 
 
