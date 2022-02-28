@@ -282,6 +282,7 @@ REFS:
 - https://www.xfelix.com/2020/09/pihole-unbound-docker-setup-on-raspberry-pi/
 - https://www.youtube.com/watch?v=4X6KYN1cQ1Y
 - https://discourse.pi-hole.net/t/commonly-whitelisted-domains/212
+- blocklist: https://firebog.net/
 
 SUMMARY:
 Install PI-HOLE DNS 
@@ -314,8 +315,23 @@ DETAILS:
 
 STEPS:
 1. Set up new shared folders [see CONFIGURE SSD IN OPENMEDIAVAULT]: var/lib//
+## WIREGUARD VPN
+https://www.reddit.com/r/pihole/comments/bnihyz/guide_how_to_install_wireguard_on_a_raspberry_pi/
+
+https://www.addictedtotech.net/home-vpn-using-wireguard-docker-on-a-raspberry-pi-4/
+https://github.com/notasausage/pi-hole-unbound-wireguard
+https://www.geefire.eu.org/2020/11/01/wireguard-warning-conf-is-world-accessible.html
 
 
+https://www.dnsleaktest.com/
+sudo docker exec -it wireguard /app/show-peer 1
+
+## INSTALL DYNAMIC DNS - DUCKDNS
+https://www.duckdns.org/domains
+https://www.wundertech.net/how-to-setup-duckdns-on-a-raspberry-pi/
+
+echo url="https://www.duckdns.org/update?domains=[YOUR_DOMAIN]&token=[YOUR_TOKEN]&ip=" | curl -k -o ./duck.log -K -
+*/5 * * * * ./duck.sh >/dev/null 2>&1
 
 ## INSTALL NEXTCLOUD (PORTAINER) -- NOT CURRENTLY WORKING - ISSUES WITH OTHER USERS HAVING PERMISSION - ERROR 0770 -- 
 
